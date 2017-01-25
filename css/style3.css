@@ -1,0 +1,36 @@
+
+
+
+.navbar {
+	height: 70px;
+	margin: 0;
+	border-bottom: 2px solid #000;
+	background-color: transparent;
+}
+
+.collapse {
+	padding-top: 10px;
+}
+
+.logo_ozex {
+	height: 40px;
+	margin-left: 20px;
+}
+
+#domov {
+	background-color: #123345;
+	min-height: 100%;
+	margin: 20px;
+}
+
+.fotka_ozex {
+	background: url(../images/ozex/tapeta.jpg) no-repeat center;;
+	background-size: cover;
+	height: 250px;
+	padding: 20px;
+}
+
+.main {
+	padding-top: 70px;
+
+}

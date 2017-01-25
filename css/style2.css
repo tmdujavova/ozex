@@ -1,0 +1,241 @@
+/* CSS Document */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: black;
+    background: url("../images/tapeta.jpg") 0 0 repeat;
+}
+
+a img {
+    display: block;
+    border: none;
+}
+
+a {
+    text-decoration: underline;
+}
+
+/*-------HEADER--------*/
+header {    
+    width: 100%;
+}
+
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    *zoom: 1;
+}
+.logo {    
+    display: block;
+    float: left;
+    margin-left: 50px;
+}
+
+.logo img {
+    width: 200px;
+    padding: 25px;
+}
+
+.menu {
+    float: right;
+}
+
+.kontakt_menu {
+    color: #fff;
+    text-decoration: none;
+    font-size: 110%;
+    padding: 10px;
+}
+
+.kontakt_menu:hover, .lang a:hover {
+    background-color: #555555;
+}
+
+.lang {
+    margin: 25px;
+    margin-left: 0px;
+    display: inline-block;
+    color: #fff;
+}
+
+.lang a {
+    font-size: 80%;   
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+}
+
+/*-------OZEX--------*/
+.ozex{
+    background-color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    padding: 50px  5%;
+    padding-bottom: 70px;
+}
+
+.text_ozex {
+    color: #000;
+    width: 40%;
+    padding: 0 5%;
+
+}
+
+
+.foto_ozex  {
+    margin-top: 50px;
+    width: 50%;
+}
+
+/*-------PLAZA--------*/
+
+.plaza {
+    
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    padding: 50px 4%;
+
+}
+
+.box {
+    width: 30%;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.box a {
+color: #aaaaaa;   
+}
+
+.box img {
+    width: 80%;
+}
+
+
+/*-------KONTAKT--------*/
+.kontakt {
+    background-color: #282828;
+    color: #fff;
+}
+
+.kontakt_container {
+    width: 80%; 
+    padding: 20px; 
+    margin: 0 auto; 
+}
+
+.kontakt p {
+    line-height: 18px;
+    padding: 15px;
+    margin-top: 0;
+}
+
+.kontakt h1 {
+    margin-bottom: 0;
+}
+
+.j {
+    width: 30%;
+    float: left;
+}
+
+.k {
+    width: 30%;
+    float: left;
+}
+
+.kontakt span {
+    color: #aaaaaa;
+}
+
+
+
+
+/*-------FOOTER--------*/
+footer {
+    width: 100%;
+    text-align: center;
+    background: black;
+}
+
+div#footer_wrapper {
+    width: 920px;
+    margin: 0 auto;
+    position: relative;
+    height: 70px;
+
+}
+
+div#foot1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/pb.jpg") 0 0 no-repeat;
+    width: 85px;
+    height: 49px;
+}
+
+.plaz {
+    display: block;
+    width: 85px;
+    height: 49px;
+    border: none;
+    cursor: pointer;
+}
+
+div#foot2 {
+    position: absolute;
+    top: 5px;
+    left: 392px;
+    background: url("../images/gofor.jpg") 0 0 no-repeat;
+    width: 133px;
+    height: 45px;
+}
+
+div#foot3 {
+    position: absolute;
+    top: 20px;
+    left: 820px;
+    width: 100px;
+    height: 20px;
+    font-size: 11px;
+    text-align: right;
+}
+
+#foot3 a {
+    color: #555555;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

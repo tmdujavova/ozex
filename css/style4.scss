@@ -1,0 +1,60 @@
+.navbar {
+	height: 70px;
+	margin: 0;
+	border-bottom: 2px solid #000;
+	background-color: transparent;
+}
+
+.collapse {
+	padding-top: 10px;
+}
+
+.logo_ozex {
+	height: 40px;
+	margin-left: 20px;
+}
+
+#domov {
+	background-color: #123345;
+	min-height: 595px;
+	max-height:100%;
+}
+
+.fotka_ozex {
+	background: url(../images/ozex/tapeta.jpg) no-repeat center;;
+	background-size: cover;
+	height: 250px;
+}
+
+.main {
+	padding-top: 70px;
+
+}
+
+.plaza {
+	height: 40%;
+}
+
+.beach {
+	background: url(../images/plaza/beach/beach-foto.jpg) no-repeat center;
+	background-size: cover;
+	display: inline-block;
+    height: 300px;
+    width: 32%;
+}
+
+.residence {
+	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;;
+	background-size: cover;
+	display: inline-block;
+    height: 300px;
+    width: 32%;
+}
+
+.villa {
+	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;;
+	background-size: cover;
+	display: inline-block;
+	height: 300px;
+	width: 32%;
+}
