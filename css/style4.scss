@@ -1,16 +1,23 @@
+@font-face {
+    font-family: SourceSansPro; 
+    src: url("../fonts/SourceSansPro-Light.ttf"); 
+}
 
-$font-stack:    Helvetica, sans-serif;
+$font-stack: 'SourceSansPro', Helvetica, sans-serif;
 $primary-color: #333;
 
 * {
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
 	font: 100% $font-stack;
   	color: $primary-color;
+  	
 }
 
 .main {	
@@ -45,6 +52,7 @@ header {
     margin: 0;
     border-bottom: 2px solid #000;
     background-color: #fff;
+    background: url(..//images/bg/agsquare.png) repeat;
 }
 
 .logo {
@@ -62,7 +70,8 @@ header {
 	float: right;
 	margin: 0 5% 0 0;
 	padding-left: 0;
-	overflow: hidden;
+	
+	
 
 	li {
 		display: inline-block;
@@ -72,29 +81,95 @@ header {
 	a {
 		text-decoration: none;
 		color: #000;
-		padding: 24px 10px;
+		padding: 23px 10px;
 		display: inline-block;
+		transition: all 0.2s ease-in-out 0s;
 	}
 
  	a:link, a:visited {
 		color:  #000;
 	}
 
- 	a:focus,  a:hover,  a:active {
-		background-color: #bbb;
-		color: #fff;
+ 	a:focus,  a:hover,  a:active  {
+		background-color: #ddd;
 		border-bottom: 4px solid #000;
 	}
 
+	@media screen and (max-width: 650px) {
+	
+	float: none;
+	margin: 0;
+	margin-top: 70px;
+.showing {display: block;}
+	li {
+		width: 100%;
+		text-align: left;
+		border-bottom: 1px solid #000;
+		background-color: #fff;
+    	background: url(..//images/bg/agsquare.png) repeat;
+    	display: none;
+	}
+
+	 a {
+	 	display: block;
+	 	width: 100%;
+	 	padding: 10px 0 10px 7%;
+	 	font-size: 120%;
+	 }
+
+	 a:focus,  a:hover,  a:active  {
+		background-color: #ddd;
+	}
+
+
+  }
+
 }
+
+
+
+.menu {
+	position: absolute;
+	top: 5px;
+	right: 5%;
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
+	color: #000;
+	display: none;
+	@media screen and (max-width: 650px) {
+		display: block;
+	}
+}
+
+.menu:hover {
+	background-color: #ddd;
+}
+
+
 
 /*------DOMOV-----*/
 
 #domov {
-	background-color: #123345;
+	background: url(..//images/bg/agsquare.png) repeat;
 	height: 100%;
 	width: 100%;
-	padding: 2%;
+	padding: 3%;
+	
+}
+
+
+.fotka_ozex {
+	background: url(../images/ozex/budova-ozex.jpg) no-repeat center;
+	background-size: cover;
+	height: 250px;
+	max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plaza {
+	max-width: 1200px;
+	margin: 0 auto;
 	display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -104,16 +179,13 @@ header {
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   justify-content: center;
-}
+  padding-top: 10px;
 
 
-.fotka_ozex {
-	background: url(../images/ozex/budova-ozex.jpg) no-repeat center;
-	background-size: cover;
-	height: 250px;
-	width: 100%;
-    flex-grow: 3;
-    margin: 20px 1% 10px 1%;
+  @media screen and (max-width: 650px) {
+    flex-flow: column;
+  }
+
 }
 
 
@@ -123,9 +195,12 @@ header {
 	background-size: cover;
 	display: inline-block;
     height: 300px;
-    width: 31%;
-    flex-grow: 1;
-    margin:10px 1%;
+    width: 32.66%;
+	margin-right: 1%;
+	@media screen and (max-width: 650px) {
+    width: 100%;
+	margin-right: 0;
+  }
 }
 
 .residence {
@@ -133,9 +208,12 @@ header {
 	background-size: cover;
 	display: inline-block;
     height: 300px;
-    width: 31%;
-    flex-grow: 1;
-    margin:10px 1%;
+    width: 32.66%;
+    @media screen and (max-width: 650px) {
+    width: 100%;
+    margin-top: 10px;
+  }
+
 }
 
 .villa {
@@ -143,9 +221,13 @@ header {
 	background-size: cover;
 	display: inline-block;
 	height: 300px;
-	width: 31%;
-	flex-grow: 1;
-	margin:10px 1%;
+	width: 32.66%;
+	margin-left: 1%;
+	@media screen and (max-width: 650px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 
@@ -161,13 +243,115 @@ header {
 
 #profil h2 {
 	text-align: center;
-	color: #000;
+	color: #fff;
+	font-size: 200%;
+
 }
 
 #profil p {
-	font-size: 150%;
+	font-size: 140%;
 	width: 80%;
 	padding: 10px 20px;
 	
+}
+
+
+/*------KONTAKT-----*/
+#kontakt {
+	width: 100%;
+	padding: 30px 10%;
+	margin: 0 auto;
+	color: #fff;
+	background-color: #222;
+    background: url(..//images/bg/black_lozenge.png) repeat;
+
+	h2 {
+		margin-top: 0;
+		padding-left: 10%;
+		font-size: 135%;
+	}
+	
+
+}
+
+
+
+.row{
+	padding-left: 10%;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+
+
+
+  @media screen and (max-width: 650px) {
+    flex-flow: column;
+  }
+}
+
+.row>div {
+    width: 30%;
+    font-size: 115%;
+
+    ul {
+    	margin: 0;
+		padding-left: 0;
+		list-style: none;
+
+    }
+
+	@media screen and (max-width: 650px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+footer {
+	width: 100%;
+	padding: 5px 10%;
+	background-color: #333;
+	text-align: right;
+
+	a {
+		display: block;
+		color: #eee;
+		text-decoration: none;
+		font-size: 85%;
+		
+	}
+}
+
+
+
+
+
+
+.back-to-top {
+	background-color: #bbb;
+	position: fixed;
+	bottom: 27px;
+	right: 4%;
+	z-index: 10;
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-bottom: 4px solid #000;
+	text-align: center;
+	color: #000;
+	transition: all 0.2s ease-in-out 0s;
+	.fa {
+	position: relative;
+    bottom: 7px;
+}
+}
+
+.back-to-top:hover {
+	background-color: #fff;
 }
 

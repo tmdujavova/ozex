@@ -7,9 +7,12 @@
     <title>OZEX</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css"> 
-    <link rel="stylesheet" href="css/style4.css" type="text/css">    
+    <link rel="stylesheet" href="css/style4.css" type="text/css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
     <script type="text/javascript" src="JS/jQuery.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
@@ -17,7 +20,7 @@
 
   </head>
     <body>
-      <div class="container top">
+      <div class="container" id="top">
       <header>        
               <a class="logo">
                 <img class="logo_ozex" alt="Brand" src="images/logo/logo-ozex-3.png">
@@ -26,33 +29,39 @@
              <ul class="nav">
                 <li><a href="#top">Domov</a></li>
                 <li><a href="#profil">Profil firmy</a></li>
-                <li><a href="#">Kontakt</a></li> 
+                <li><a href="#kontakt">Kontakt</a></li> 
               </ul>
+              <div class="menu"><i class="fa fa-bars fa-3x"></i></div>
       </header>
     <div class="main">
       <div id="domov">
           <div class="fotka_ozex">
+          <img src="images/logo/logo-ozex-4.png" alt="ozex">
           </div>
 
+          <div class="plaza">
+
             <div class="beach">
-              <h2>plaza beach</h2>
+              <img src="images/logo/logo-beach.png" alt="Plaza Beach Resort">
             </div>
             <div class="residence">
-            <h2>plaza residence</h2>
+
+            <img src="images/logo/logo-residence.png" alt="Plaza Residence">
               
             </div>
 
             <div class="villa">
-            <h2>villa plaza</h2>
+
+            <img src="images/logo/logo-villa.png" alt="Villa Plaza">
               
           </div>
-
+    </div>
 
       </div>
        
 
       <div id="profil">
-      <h2>Profil firmy</h2>
+      <h2>PROFIL FIRMY</h2>
         <p>Spoločnosť OZEX s.r.o. Prešov bola založená v roku 1992 a od svojho vzniku prešla dynamickým rozvojom najskôr v oblasti odevného priemyslu a neskôr diverzifikáciou majoritnej časti svojich aktivít do oblasti cestovného ruchu a turizmu. Z pôvodných činnosti si zachovala majetkovú účasť v spoločnom slovensko-talianskom výrobnom podniku EGOTEX s.r.o., ktorého hlavnou činnosťou je výroba luxusnej pánskej konfekcie pre renomované svetové značky, ako je CORNELIANI, alebo RALPH LAUREN.
         </p>
                 
@@ -66,10 +75,45 @@ Stratégiou spoločnosti OZEX s.r.o. Prešov je aj naďalej vytváranie filozofi
           
       </div>
 
-    <div class="kontakt">
-      
+    <div id="kontakt">
+    <h2>KONTAKT</h2>
+    <div class="row">
+    <div class="kontak_ozex">
+      <ul>
+          <li>HEAD OFFICE </li>
+          <li>Ozex s.r.o. Prešov </li>
+          <li>Masarykova 22 A </li>
+          <li>080 01 PREŠOV</li>
+          <li>+421 51 75 601 11</li>
+          <li>head_office@ozex.sk</li>                                                
+      </ul>
+    </div>
+    <div class="kontakt_plaza">
+      <ul>
+          <li>PLAZA BEACH REZORT </li>
+          <li>Kutuzovova 4  </li>
+          <li>080 05 PREŠOV </li>
+          <li>+421 903 644 237 </li>
+          <li>milica@plazabeach.sk</li>
+                                              
+      </ul>
+                                                          
+    </div>
+    <div class="kontakt_egotex">
+      <ul>
+          <li>EGOTEX s.r.o. </li>
+          <li>Masarykova 22 A  </li>
+          <li>080 01 PREŠOV</li>                                             
+      </ul>
+    </div>
+</div>
+
+                 
+                                                      
     </div> 
-    </div>    
+    </div>  
+
+    <footer><a href="#">&copy; 2017 TMD</a></footer>  
 
 
       </div>
