@@ -44,5 +44,18 @@ $(document).ready(function(){
 				$('.nav li').toggleClass('showing');
 			});
 
+//----------------------------------------------
+
+var plaza = $('.plaza').find('div'); 
+
+
+	plaza.hover(function(){
+
+		$(this).find('p').show();
+		$(this).find('h2').css("margin-top", "30px");
+	}, function(){
+    		$(this).find('p').hide();
+    		$(this).find('h2').css("margin-top", "75px");
+    	});
 
  });

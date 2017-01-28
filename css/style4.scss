@@ -165,6 +165,29 @@ header {
 	height: 250px;
 	max-width: 1200px;
     margin: 0 auto;
+    img {
+    	position: relative;
+    width: 25%;
+    top: 30%;
+    left: 38%;
+    }
+
+	@media screen and (max-width: 900px) {
+		img {
+		    width: 40%;
+			top: 31%;
+			left: 30%;
+		}
+	}
+
+	 @media screen and (max-width: 650px) {
+    	img {
+		    width: 50%;
+			top: 32%;
+			left: 23%;
+		}
+  }
+
 }
 
 .plaza {
@@ -181,6 +204,8 @@ header {
   justify-content: center;
   padding-top: 10px;
 
+  
+
 
   @media screen and (max-width: 650px) {
     flex-flow: column;
@@ -188,45 +213,117 @@ header {
 
 }
 
-
-
-.beach {
-	background: url(../images/plaza/beach/beach-foto.jpg) no-repeat center;
+.plaza>div {
+	cursor: pointer;
 	background-size: cover;
 	display: inline-block;
     height: 300px;
-    width: 32.66%;
+    
+
+    p {
+    	display: none;
+    	color: #fff;
+    	font-size: 120%;
+		
+		@media screen and (max-width: 650px) {
+			display: block;
+    }
+}
+}
+
+
+
+
+
+.beach {
+	background: url(../images/plaza/beach/beach-foto.jpg) no-repeat center;	
 	margin-right: 1%;
+	width: 32.66%;
+	img {
+  	width: 65%;
+    position: relative;
+    top: 44%;
+    left: 15%;
+  }
+
+  	@media screen and (max-width: 900px) {
+		    img {
+		  	width: 80%;
+			top: 50%;
+			left: 9%;
+		  }
+  }
+
 	@media screen and (max-width: 650px) {
     width: 100%;
 	margin-right: 0;
+	img {
+		    width: 61%;
+			top: 40%;
+			left: 18%;
+		}
   }
 }
 
 .residence {
-	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;;
-	background-size: cover;
-	display: inline-block;
-    height: 300px;
-    width: 32.66%;
+	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;
+	width: 32.66%;
+	
+	img {
+		width: 80%;
+    position: relative;
+    top: 60%;
+    left: 10%;
+	}
+
+	@media screen and (max-width: 900px) {
+		    img {
+				width: 85%;
+				top: 66%;
+				left: 8%;
+		  }
+		}
+
     @media screen and (max-width: 650px) {
     width: 100%;
     margin-top: 10px;
+    img {
+		    width: 75%;
+			top: 60%;
+			left: 13%;
+		}
   }
 
 }
 
 .villa {
-	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;;
-	background-size: cover;
-	display: inline-block;
-	height: 300px;
+	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;
 	width: 32.66%;
 	margin-left: 1%;
+	img {
+		position: relative;
+    top: 48%;
+    left: 9%;
+    width: 87%;
+	}
+
+	@media screen and (max-width: 900px) {
+		    img {
+		  	top: 59%;
+			left: 5%;
+			width: 93%;
+		  }
+		}
+
 	@media screen and (max-width: 650px) {
     width: 100%;
     margin-left: 0;
     margin-top: 10px;
+    img {
+		    top: 47%;
+			left: 9%;
+			width: 82%;
+		}
   }
 }
 
@@ -238,20 +335,32 @@ header {
 	color: #fff;
 	background: url(../images/ozex/oblek2.jpg) no-repeat center;;
 	background-size: cover;
-	padding: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 #profil h2 {
 	text-align: center;
 	color: #fff;
 	font-size: 200%;
+	@media screen and (max-width: 650px) {
+    font-size: 140%;
+  }
 
 }
 
 #profil p {
 	font-size: 140%;
-	width: 80%;
-	padding: 10px 20px;
+	max-width: 1200px;
+	padding: 10px 7%;
+	margin: 0 auto;
+	text-align: center;
+	@media screen and (max-width: 650px) {
+    font-size: 120%;
+    width: 90%;
+    padding: 10px 5%;
+
+  }
 	
 }
 
