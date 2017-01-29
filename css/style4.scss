@@ -7,8 +7,6 @@ $font-stack: 'SourceSansPro', Helvetica, sans-serif;
 $primary-color: #333;
 
 * {
-	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -194,21 +192,21 @@ header {
 	max-width: 1200px;
 	margin: 0 auto;
 	display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;  
-  
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: center;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 10px;
 
   
 
 
   @media screen and (max-width: 650px) {
-    flex-flow: column;
+    -ms-flex-flow: column;
+        flex-flow: column;
   }
 
 }
@@ -218,15 +216,22 @@ header {
 	background-size: cover;
 	display: inline-block;
     height: 300px;
+
+    a {
+    	text-decoration: none;
+    }
     
 
     p {
     	display: none;
     	color: #fff;
-    	font-size: 120%;
+    	font-size: 130%;
+    	padding: 2%;
+    	text-align: center;
+		
 		
 		@media screen and (max-width: 650px) {
-			display: block;
+			display: block!important;
     }
 }
 }
@@ -240,10 +245,14 @@ header {
 	margin-right: 1%;
 	width: 32.66%;
 	img {
+		
   	width: 65%;
     position: relative;
     top: 44%;
     left: 15%;
+	
+	
+
   }
 
   	@media screen and (max-width: 900px) {
@@ -259,7 +268,7 @@ header {
 	margin-right: 0;
 	img {
 		    width: 61%;
-			top: 40%;
+			top: 5%;
 			left: 18%;
 		}
   }
@@ -270,10 +279,15 @@ header {
 	width: 32.66%;
 	
 	img {
+		
 		width: 80%;
     position: relative;
     top: 60%;
     left: 10%;
+	}
+
+	p {
+		margin-top: 12%;
 	}
 
 	@media screen and (max-width: 900px) {
@@ -289,9 +303,10 @@ header {
     margin-top: 10px;
     img {
 		    width: 75%;
-			top: 60%;
+			top: 11%;
 			left: 13%;
 		}
+
   }
 
 }
@@ -301,6 +316,7 @@ header {
 	width: 32.66%;
 	margin-left: 1%;
 	img {
+		
 		position: relative;
     top: 48%;
     left: 9%;
@@ -320,7 +336,7 @@ header {
     margin-left: 0;
     margin-top: 10px;
     img {
-		    top: 47%;
+		    top: 6%;
 			left: 9%;
 			width: 82%;
 		}
@@ -328,6 +344,11 @@ header {
 }
 
 
+.hover {
+	
+		top: 8%!important;
+	transition: all 0.5s ease-in-out 0s!important;	
+	}
 
 
 /*------PROFIL-----*/
@@ -388,19 +409,19 @@ header {
 .row{
 	padding-left: 10%;
 	display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;  
-  
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  justify-content: center;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
 
 
   @media screen and (max-width: 650px) {
-    flex-flow: column;
+    -ms-flex-flow: column;
+        flex-flow: column;
   }
 }
 

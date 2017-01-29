@@ -52,10 +52,10 @@ var plaza = $('.plaza').find('div');
 	plaza.hover(function(){
 
 		$(this).find('p').show();
-		$(this).find('h2').css("margin-top", "30px");
+		$(this).find('img').addClass('hover');
 	}, function(){
     		$(this).find('p').hide();
-    		$(this).find('h2').css("margin-top", "75px");
+    		$(this).find('img').removeClass('hover');
     	});
 
  });
