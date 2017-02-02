@@ -377,7 +377,6 @@ header {
 	padding: 10px 10%;
 	margin: 0 auto;
 	text-align: center;
-	/*background: rgba(128, 128, 128, 0.5);*/
 
 	@media screen and (max-width: 650px) {
 	    font-size: 120%;
@@ -433,11 +432,6 @@ header {
     	text-align: center;
   	}
 
-  	.fa {
-  		padding-right: 10px;
-  		color: #80DEEA;
-  	}
-
 }
 
 .row {	
@@ -464,13 +458,30 @@ header {
     	margin: 0;
 		padding-left: 0;
 		list-style: none;
+		
+		.fa {
+  		color: #80DEEA;
+  			}
+
+  		.fa-map-marker {
+			padding-right: 14px;
+  		}
+			
+		.fa-phone {
+			padding-right: 10px; 
+		}
+
+		.fa-envelope {
+			padding-right: 8px; 
+		}
+
 
 		li:first-child {
 			color: #80DEEA;	
 		}
 
 		li:nth-child(3) {
-			padding-left: 20px; 
+			padding-left: 25px; 
 		}
     }
 
