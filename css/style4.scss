@@ -12,28 +12,28 @@ $primary-color: #333;
     -moz-osx-font-smoothing: grayscale;
 }
 
+html, body{
+  height:100%;
+}
+
 body {
 	font: 100% $font-stack;
   	color: $primary-color;
-  	
+  	background: url(..//images/bg/agsquare.png) repeat;  	
 }
 
-.main {	
-	margin: 0;
-	padding-top: 70px;
-}
 
-.main:before,
-.main:after {
+.header:before,
+.header:after {
 	content: " ";
 	display: table;
 }
 
-.main:after {
+.header:after {
 	clear: both;
 }
 
-.main {
+.header {
 	*zoom: 1;
 }
 
@@ -51,109 +51,102 @@ header {
     border-bottom: 2px solid #000;
     background-color: #fff;
     background: url(..//images/bg/agsquare.png) repeat;
-}
 
-.logo {
-	float: left;
-	margin-top: 12.5px;
-	margin-left: 5%;
-}
 
-.logo_ozex {
-	height: 45px;
-
-}
-
-.nav {
-	float: right;
-	margin: 0 5% 0 0;
-	padding-left: 0;
-	
-	
-
-	li {
-		display: inline-block;
-		list-style: none;
+	.logo {
+		float: left;
+		margin-top: 12.5px;
+		margin-left: 5%;
 	}
 
-	a {
-		text-decoration: none;
+	.logo_ozex {
+		height: 45px;
+	}
+
+	.nav {
+		float: right;
+		margin: 0 5% 0 0;
+		padding-left: 0;
+		
+		li {
+			display: inline-block;
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+			padding: 23px 10px;
+			display: inline-block;
+			transition: all 0.2s ease-in-out 0s;
+		}
+
+	 	a:link, a:visited {
+			color:  #000;
+		}
+
+	 	a:focus,  a:hover,  a:active  {
+			background-color: #ddd;
+			border-bottom: 4px solid #000;
+		}
+
+		@media screen and (max-width: 650px) {		
+			float: none;
+			margin: 0;
+			margin-top: 70px;
+
+			.showing {display: block;}
+
+			li {
+				width: 100%;
+				text-align: left;
+				border-bottom: 1px solid #000;
+				background-color: #fff;
+		    	background: url(..//images/bg/agsquare.png) repeat;
+		    	display: none;
+			}
+
+			a {
+			 	display: block;
+			 	width: 100%;
+			 	padding: 10px 0 10px 7%;
+			 	font-size: 120%;
+		 	}
+
+		 	a:focus,  a:hover,  a:active  {
+				background-color: #ddd;
+			}
+	  }
+	}
+
+	.menu {
+		position: absolute;
+		top: 5px;
+		right: 5%;
+		padding: 5px;
+		text-align: center;
+		cursor: pointer;
 		color: #000;
-		padding: 23px 10px;
-		display: inline-block;
-		transition: all 0.2s ease-in-out 0s;
+		display: none;
+
+		@media screen and (max-width: 650px) {
+			display: block;
+		}
 	}
 
- 	a:link, a:visited {
-		color:  #000;
-	}
-
- 	a:focus,  a:hover,  a:active  {
-		background-color: #ddd;
-		border-bottom: 4px solid #000;
-	}
-
-	@media screen and (max-width: 650px) {
-	
-	float: none;
-	margin: 0;
-	margin-top: 70px;
-.showing {display: block;}
-	li {
-		width: 100%;
-		text-align: left;
-		border-bottom: 1px solid #000;
-		background-color: #fff;
-    	background: url(..//images/bg/agsquare.png) repeat;
-    	display: none;
-	}
-
-	 a {
-	 	display: block;
-	 	width: 100%;
-	 	padding: 10px 0 10px 7%;
-	 	font-size: 120%;
-	 }
-
-	 a:focus,  a:hover,  a:active  {
+	.menu:hover {
 		background-color: #ddd;
 	}
 
-
-  }
-
 }
-
-
-
-.menu {
-	position: absolute;
-	top: 5px;
-	right: 5%;
-	padding: 5px;
-	text-align: center;
-	cursor: pointer;
-	color: #000;
-	display: none;
-	@media screen and (max-width: 650px) {
-		display: block;
-	}
-}
-
-.menu:hover {
-	background-color: #ddd;
-}
-
 
 
 /*------DOMOV-----*/
-
 #domov {
-	background: url(..//images/bg/agsquare.png) repeat;
-	height: 100%;
+	height: calc(100% - 70px);
 	width: 100%;
 	padding: 3%;
-	
+	padding-top: calc(3% + 70px);	
 }
 
 
@@ -242,7 +235,7 @@ header {
 
 .beach {
 	background: url(../images/plaza/beach/beach-foto.jpg) no-repeat center;	
-	margin-right: 1%;
+	
 	width: 32.66%;
 	img {
 		
@@ -277,7 +270,7 @@ header {
 .residence {
 	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;
 	width: 32.66%;
-	
+	margin-left: 1%;
 	img {
 		
 		width: 80%;
@@ -314,7 +307,8 @@ header {
 .villa {
 	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;
 	width: 32.66%;
-	margin-left: 1%;
+	
+	margin-right: 1%;
 	img {
 		
 		position: relative;
@@ -354,10 +348,17 @@ header {
 /*------PROFIL-----*/
 #profil {
 	color: #fff;
-	background: url(../images/ozex/oblek2.jpg) no-repeat center;;
+	background: url(..//images/bg/agsquare.png) repeat;
+	width: 100%;
+	padding: 0 3%;
+}
+
+.content_profil {
+	background: url(../images/ozex/oblek2.jpg) no-repeat center;
 	background-size: cover;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 50px 0;
 }
 
 #profil h2 {
