@@ -4,7 +4,8 @@
 }
 
 $font-stack: 'SourceSansPro', Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: #fff;
+$max-width: 1200px;
 
 * {
 	box-sizing: border-box;
@@ -12,28 +13,28 @@ $primary-color: #333;
     -moz-osx-font-smoothing: grayscale;
 }
 
+html, body{
+  height:100%;
+}
+
 body {
 	font: 100% $font-stack;
   	color: $primary-color;
-  	
+  	background: url(..//images/bg/agsquare.png) repeat;  	
 }
 
-.main {	
-	margin: 0;
-	padding-top: 70px;
-}
 
-.main:before,
-.main:after {
+.header:before,
+.header:after {
 	content: " ";
 	display: table;
 }
 
-.main:after {
+.header:after {
 	clear: both;
 }
 
-.main {
+.header {
 	*zoom: 1;
 }
 
@@ -51,123 +52,124 @@ header {
     border-bottom: 2px solid #000;
     background-color: #fff;
     background: url(..//images/bg/agsquare.png) repeat;
-}
 
-.logo {
-	float: left;
-	margin-top: 12.5px;
-	margin-left: 5%;
-}
 
-.logo_ozex {
-	height: 45px;
-
-}
-
-.nav {
-	float: right;
-	margin: 0 5% 0 0;
-	padding-left: 0;
-	
-	
-
-	li {
-		display: inline-block;
-		list-style: none;
+	.logo {
+		float: left;
+		margin-top: 12.5px;
+		margin-left: 5%;
 	}
 
-	a {
-		text-decoration: none;
+	.logo_ozex {
+		height: 45px;
+	}
+
+	.nav {
+		float: right;
+		margin: 0 5% 0 0;
+		padding-left: 0;
+		
+		li {
+			display: inline-block;
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+			padding: 23px 10px;
+			display: inline-block;
+			transition: all 0.2s ease-in-out 0s;
+		}
+
+	 	a:link, a:visited {
+			color:  #000;
+		}
+
+	 	a:focus,  a:hover,  a:active  {
+			background-color: #ddd;
+			border-bottom: 4px solid #000;
+		}
+
+		@media screen and (max-width: 650px) {		
+			float: none;
+			margin: 0;
+			margin-top: 70px;
+
+			.showing {display: block;}
+
+			li {
+				width: 100%;
+				text-align: left;
+				border-bottom: 1px solid #000;
+				background-color: #fff;
+		    	background: url(..//images/bg/agsquare.png) repeat;
+		    	display: none;
+			}
+
+			a {
+			 	display: block;
+			 	width: 100%;
+			 	padding: 10px 0 10px 7%;
+			 	font-size: 120%;
+		 	}
+
+		 	a:focus,  a:hover,  a:active  {
+				background-color: #ddd;
+			}
+	  }
+	}
+
+	.menu {
+		position: absolute;
+		top: 5px;
+		right: 5%;
+		padding: 5px;
+		text-align: center;
+		cursor: pointer;
 		color: #000;
-		padding: 23px 10px;
-		display: inline-block;
-		transition: all 0.2s ease-in-out 0s;
+		display: none;
+
+		@media screen and (max-width: 650px) {
+			display: block;
+		}
 	}
 
- 	a:link, a:visited {
-		color:  #000;
-	}
-
- 	a:focus,  a:hover,  a:active  {
-		background-color: #ddd;
-		border-bottom: 4px solid #000;
-	}
-
-	@media screen and (max-width: 650px) {
-	
-	float: none;
-	margin: 0;
-	margin-top: 70px;
-.showing {display: block;}
-	li {
-		width: 100%;
-		text-align: left;
-		border-bottom: 1px solid #000;
-		background-color: #fff;
-    	background: url(..//images/bg/agsquare.png) repeat;
-    	display: none;
-	}
-
-	 a {
-	 	display: block;
-	 	width: 100%;
-	 	padding: 10px 0 10px 7%;
-	 	font-size: 120%;
-	 }
-
-	 a:focus,  a:hover,  a:active  {
+	.menu:hover {
 		background-color: #ddd;
 	}
 
-
-  }
-
 }
-
-
-
-.menu {
-	position: absolute;
-	top: 5px;
-	right: 5%;
-	padding: 5px;
-	text-align: center;
-	cursor: pointer;
-	color: #000;
-	display: none;
-	@media screen and (max-width: 650px) {
-		display: block;
-	}
-}
-
-.menu:hover {
-	background-color: #ddd;
-}
-
 
 
 /*------DOMOV-----*/
-
 #domov {
-	background: url(..//images/bg/agsquare.png) repeat;
+	position: absolute;
+	top: 0;
 	height: 100%;
 	width: 100%;
-	padding: 3%;
-	
+	padding: calc(2% + 70px) 3% 2% 3%;
+
+	@media screen and (max-width: 650px) {
+		position: relative;
+		height: auto;
+	}
+
 }
 
 
 .fotka_ozex {
-	background: url(../images/ozex/budova-ozex.jpg) no-repeat center;
+	background: url(../images/ozex/budova-ozexRetus.jpg) no-repeat center;
 	background-size: cover;
-	height: 250px;
-	max-width: 1200px;
+	height: 40%;
+	max-width: $max-width;
     margin: 0 auto;
+
     img {
     	position: relative;
-    width: 25%;
-    top: 30%;
-    left: 38%;
+	    width: 25%;
+	    top: 30%;
+	    left: 38%;
     }
 
 	@media screen and (max-width: 900px) {
@@ -179,111 +181,128 @@ header {
 	}
 
 	 @media screen and (max-width: 650px) {
+	 	padding: 10% 0;
+
     	img {
 		    width: 50%;
 			top: 32%;
 			left: 23%;
 		}
-  }
-
+  	}
 }
 
 .plaza {
-	max-width: 1200px;
+	height: 60%;
+	max-width: $max-width;
 	margin: 0 auto;
 	display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 10px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+  	padding-top: 10px;
 
-  
-
-
-  @media screen and (max-width: 650px) {
-    -ms-flex-flow: column;
-        flex-flow: column;
-  }
-
+  	@media screen and (max-width: 650px) {
+	  	-ms-flex-flow: column;
+	    flex-flow: column;
+	    height: auto;
+  	}
 }
 
 .plaza>div {
 	cursor: pointer;
 	background-size: cover;
 	display: inline-block;
-    height: 300px;
-
+	width: 32.66%;
+  
     a {
+    	color: $primary-color;
     	text-decoration: none;
     }
-    
 
+    img {
+    	display: block;
+    }
+    
     p {
-    	display: none;
-    	color: #fff;
+    	display: none;    	
     	font-size: 130%;
-    	padding: 2%;
+    	padding: 1% 5%;
     	text-align: center;
-		
-		
+    	width: 100%;
+    	margin: 8% auto;
+		background: rgba(128, 128, 128, 0.5);
+				
 		@media screen and (max-width: 650px) {
 			display: block!important;
-    }
-}
-}
-
-
-
-
-
-.beach {
-	background: url(../images/plaza/beach/DSC8301.jpg) no-repeat center;	
-	margin-right: 1%;
-	width: 32.66%;
-	img {
-		
-  	width: 65%;
-    position: relative;
-    top: 44%;
-    left: 15%;
-	
-	
-
-  }
-
-  	@media screen and (max-width: 900px) {
-		    img {
-		  	width: 80%;
-			top: 50%;
-			left: 9%;
-		  }
-  }
+    	}
+	}
 
 	@media screen and (max-width: 650px) {
-    width: 100%;
-	margin-right: 0;
+    	width: 100%;
+    }
+}
+
+.villa {
+	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;	
+	margin-right: 1%;
+
 	img {
-		    width: 61%;
-			top: 5%;
-			left: 18%;
+	    width: 87%;
+		margin: 40% auto 5%;
+	}
+
+	@media screen and (max-width: 900px) {
+		img {
+			width: 93%;
 		}
-  }
+	}
+
+	@media screen and (max-width: 650px) {
+    	margin-right: 0;
+
+    	img {
+			margin: 5% auto;
+			width: 82%;
+
+		}
+  	}
+}
+
+.beach {
+	background: url(../images/plaza/beach/IMG_9813-1.jpg) no-repeat center;		
+	
+	img {		
+	  	width: 65%;
+	    margin: 40% auto 5%;
+  	}
+
+  	@media screen and (max-width: 900px) {
+		img {
+		  	width: 80%;
+		}
+  	}
+
+	@media screen and (max-width: 650px) {
+    	margin-top: 10px;
+
+		img {
+		    width: 61%;
+			margin: 5% auto;
+		}
+  	}
 }
 
 .residence {
-	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;
-	width: 32.66%;
-	
+	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;	
+	margin-left: 1%;
+
 	img {
-		
 		width: 80%;
-    position: relative;
-    top: 60%;
-    left: 10%;
+    	margin: 45% auto 5%;
 	}
 
 	p {
@@ -291,142 +310,153 @@ header {
 	}
 
 	@media screen and (max-width: 900px) {
-		    img {
-				width: 85%;
-				top: 66%;
-				left: 8%;
+		img {
+			width: 85%;
 		  }
-		}
-
-    @media screen and (max-width: 650px) {
-    width: 100%;
-    margin-top: 10px;
-    img {
-		    width: 75%;
-			top: 11%;
-			left: 13%;
-		}
-
-  }
-
-}
-
-.villa {
-	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;
-	width: 32.66%;
-	margin-left: 1%;
-	img {
-		
-		position: relative;
-    top: 48%;
-    left: 9%;
-    width: 87%;
 	}
 
-	@media screen and (max-width: 900px) {
-		    img {
-		  	top: 59%;
-			left: 5%;
-			width: 93%;
-		  }
-		}
+    @media screen and (max-width: 650px) {
+    	margin-top: 10px;
+		margin-left: 0;
 
-	@media screen and (max-width: 650px) {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 10px;
-    img {
-		    top: 6%;
-			left: 9%;
-			width: 82%;
+    	img {
+		    width: 75%;
+			margin: 5% auto;
 		}
-  }
+  	}
 }
 
 
 .hover {
-	
-		top: 8%!important;
+	margin: 3% auto!important;
 	transition: all 0.5s ease-in-out 0s!important;	
-	}
+}
 
 
 /*------PROFIL-----*/
-#profil {
-	color: #fff;
-	background: url(../images/ozex/oblek2.jpg) no-repeat center;;
+.content {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+
+	@media screen and (max-width: 650px) {
+		position: relative;
+	}
+}
+
+
+#profil {	
+	background: url(..//images/bg/agsquare.png) repeat;
+	width: 100%;
+	padding: 3%;
+	margin: 0 auto;
+}
+
+.content_profil {
+	background: url(../images/ozex/oblek1-1.jpg) no-repeat center;
 	background-size: cover;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 50px 0;
 }
 
 #profil h2 {
 	text-align: center;
-	color: #fff;
-	font-size: 200%;
-	@media screen and (max-width: 650px) {
-    font-size: 140%;
-  }
+	margin-top: 0;	
+	font-size: 250%;
 
+	@media screen and (max-width: 650px) {
+    	font-size: 140%;
+  	}	
 }
 
 #profil p {
 	font-size: 140%;
-	max-width: 1200px;
-	padding: 10px 7%;
+	max-width: $max-width;
+	padding: 10px 10%;
 	margin: 0 auto;
 	text-align: center;
-	@media screen and (max-width: 650px) {
-    font-size: 120%;
-    width: 90%;
-    padding: 10px 5%;
+	/*background: rgba(128, 128, 128, 0.5);*/
 
-  }
-	
+	@media screen and (max-width: 650px) {
+	    font-size: 120%;
+	    width: 90%;
+	    padding: 10px 5%;
+  	}	
 }
 
 
+
+
 /*------KONTAKT-----*/
-#kontakt {
+#kontakt {	
 	width: 100%;
-	padding: 30px 10%;
-	margin: 0 auto;
-	color: #fff;
+	padding: 30px 5%;
+	padding-bottom: 50px;
+	margin: 0 auto;	
 	background-color: #222;
     background: url(..//images/bg/black_lozenge.png) repeat;
 
 	h2 {
-		margin-top: 0;
-		padding-left: 10%;
-		font-size: 135%;
+		margin-top: 0;		
+		font-size: 145%;
+
+		@media screen and (max-width: 1080px) and (min-width:650px) {
+    		text-align: center;
+    		margin: 0;
+  		}
 	}
-	
+
+	h3 {
+		color: #80DEEA;
+		font-size: 125%;
+		margin: 0;
+
+		@media screen and (max-width: 1080px) {
+    		margin-right: 40%; 
+  		}
+  		@media screen and (max-width: 650px) {
+    		margin: 0;
+  		}
+	}
 
 }
 
+.content_kontakt {
+	padding-left: 5%;
+	max-width: $max-width;
+	margin: 0 auto;
+	
+	@media screen and (max-width: 1080px) {
+    	padding-left: 0;
+    	text-align: center;
+  	}
 
+  	.fa {
+  		padding-right: 10px;
+  		color: #80DEEA;
+  	}
 
-.row{
-	padding-left: 10%;
+}
+
+.row {	
 	display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  	display: -ms-flexbox;
+  	display: flex;
+  	-ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+ 	-webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 
-
-
-  @media screen and (max-width: 650px) {
-    -ms-flex-flow: column;
+  	@media screen and (max-width: 650px) {
+    	-ms-flex-flow: column;
         flex-flow: column;
-  }
+  	}
 }
 
 .row>div {
-    width: 30%;
+    width: 25%;
     font-size: 115%;
 
     ul {
@@ -434,12 +464,38 @@ header {
 		padding-left: 0;
 		list-style: none;
 
+		li:first-child {
+			color: #80DEEA;	
+		}
+
+		li:nth-child(3) {
+			padding-left: 20px; 
+		}
     }
 
+    .kontakt_villa {
+    	width: 28%;
+    }
+
+    .kontakt_egotex {
+    	width: 22%;
+    }
+
+
+	@media screen and (max-width: 1080px) {
+    	width: 40%;		
+  	}
+
 	@media screen and (max-width: 650px) {
-    width: 100%;
-    margin-top: 20px;
-  }
+    	width: 100%;
+    	margin-bottom: 20px;
+  	}
+}
+
+@media screen and (max-width: 1080px) and (min-width:650px) {
+.kontakt_villa, .kontakt_egotex {
+    		margin-top: 25px;
+    	}
 }
 
 footer {
@@ -452,8 +508,7 @@ footer {
 		display: block;
 		color: #eee;
 		text-decoration: none;
-		font-size: 85%;
-		
+		font-size: 85%;		
 	}
 }
 

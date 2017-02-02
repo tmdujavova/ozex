@@ -149,6 +149,12 @@ header {
 	height: 100%;
 	width: 100%;
 	padding: calc(2% + 70px) 3% 2% 3%;
+
+	@media screen and (max-width: 650px) {
+		position: relative;
+		height: auto;
+	}
+
 }
 
 
@@ -175,6 +181,8 @@ header {
 	}
 
 	 @media screen and (max-width: 650px) {
+	 	padding: 10% 0;
+
     	img {
 		    width: 50%;
 			top: 32%;
@@ -200,6 +208,7 @@ header {
   	@media screen and (max-width: 650px) {
 	  	-ms-flex-flow: column;
 	    flex-flow: column;
+	    height: auto;
   	}
 }
 
@@ -223,6 +232,8 @@ header {
     	font-size: 130%;
     	padding: 2%;
     	text-align: center;
+    	width: 90%;
+    	margin: 0 auto;
 				
 		@media screen and (max-width: 650px) {
 			display: block!important;
@@ -336,6 +347,10 @@ header {
 	position: absolute;
 	top: 100%;
 	width: 100%;
+
+	@media screen and (max-width: 650px) {
+		position: relative;
+	}
 }
 
 
@@ -385,6 +400,7 @@ header {
 #kontakt {	
 	width: 100%;
 	padding: 30px 5%;
+	padding-bottom: 50px;
 	margin: 0 auto;	
 	background-color: #222;
     background: url(..//images/bg/black_lozenge.png) repeat;
