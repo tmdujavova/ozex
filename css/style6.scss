@@ -166,31 +166,56 @@ header {
 	max-width: $max-width;
     margin: 0 auto;
 
-    img {
+     @media screen and (max-width: 650px) {
+	 	padding: 10% 0;
+	 }
+
+}
+
+.logo_ozex_img {
     	position: relative;
 	    width: 25%;
-	    top: 30%;
-	    left: 38%;
-    }
-
+	    top: 17%;
+    left: 27%;
+	
 	@media screen and (max-width: 900px) {
-		img {
 		    width: 40%;
-			top: 31%;
-			left: 30%;
-		}
+			top: 25%;
+left: 17%;
+		
 	}
 
 	 @media screen and (max-width: 650px) {
-	 	padding: 10% 0;
-
-    	img {
 		    width: 50%;
 			top: 32%;
 			left: 23%;
-		}
+		
   	}
-}
+
+
+
+    }
+
+    .pecat {
+    	    width: 10%;
+    position: relative;
+    top: 20%;
+    left: 4%;
+
+	@media screen and (max-width: 900px) {
+		    width: 13%;
+			top: 25%;
+left: 4%;
+		
+	}
+
+	@media screen and (max-width: 650px) {
+		    display: none;
+		
+  	}
+
+    }
+
 
 .plaza {
 	height: 60%;
@@ -359,6 +384,7 @@ header {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 50px 0;
+	padding-top: 78px;
 }
 
 #profil h2 {
@@ -384,6 +410,20 @@ header {
 	    padding: 10px 5%;
   	}	
 }
+
+
+.pecat_text {
+	    width: 10%;
+    position: absolute;
+    left: 83%;
+    top: 5%;
+
+    @media screen and (max-width: 650px) {
+		    display: none;
+		
+  	}
+}
+
 
 
 
