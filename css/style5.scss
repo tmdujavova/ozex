@@ -24,17 +24,17 @@ body {
 }
 
 
-.header:before,
-.header:after {
+.header:before, .content_profil:before,
+.header:after, .content_profil:after {
 	content: " ";
 	display: table;
 }
 
-.header:after {
+.header:after, .content_profil:after {
 	clear: both;
 }
 
-.header {
+.header, .content_profil {
 	*zoom: 1;
 }
 
@@ -52,6 +52,11 @@ header {
     border-bottom: 2px solid #000;
     background-color: #fff;
     background: url(..//images/bg/agsquare.png) repeat;
+
+    .contanier_header {
+		max-width: calc( 1200px + 10%);
+		margin: 0 auto;
+    }
 
 
 	.logo {
@@ -166,31 +171,56 @@ header {
 	max-width: $max-width;
     margin: 0 auto;
 
-    img {
+     @media screen and (max-width: 650px) {
+	 	padding: 10% 0;
+	 }
+
+}
+
+.logo_ozex_img {
     	position: relative;
 	    width: 25%;
-	    top: 30%;
-	    left: 38%;
-    }
-
+	    top: 17%;
+    left: 27%;
+	
 	@media screen and (max-width: 900px) {
-		img {
 		    width: 40%;
-			top: 31%;
-			left: 30%;
-		}
+			top: 25%;
+left: 17%;
+		
 	}
 
 	 @media screen and (max-width: 650px) {
-	 	padding: 10% 0;
-
-    	img {
 		    width: 50%;
 			top: 32%;
 			left: 23%;
-		}
+		
   	}
-}
+
+
+
+    }
+
+    .pecat {
+    	    width: 10%;
+    position: relative;
+    top: 20%;
+    left: 4%;
+
+	@media screen and (max-width: 900px) {
+		    width: 13%;
+			top: 25%;
+left: 4%;
+		
+	}
+
+	@media screen and (max-width: 650px) {
+		    display: none;
+		
+  	}
+
+    }
+
 
 .plaza {
 	height: 60%;
@@ -347,19 +377,31 @@ header {
 
 
 #profil {	
-	background: url(..//images/bg/agsquare.png) repeat;
+	background: url(..//images/bg/tapeta.jpg) repeat;
 	width: 100%;
 	padding: 3%;
 	margin: 0 auto;
+	border-top: 15px solid black;
+	display:flex;
+	justify-content:center;
+	align-items:center;
 }
 
 .content_profil {
-	background: url(../images/ozex/oblek1-1.jpg) no-repeat center;
-	background-size: cover;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 50px 0;
 }
+
+.oblek {
+	width: 40%;
+	float: left;
+	display: inline-block;
+
+}
+
+
+
 
 #profil h2 {
 	text-align: center;
@@ -374,10 +416,9 @@ header {
 #profil p {
 	font-size: 140%;
 	max-width: $max-width;
-	padding: 10px 10%;
+	padding: 10px 6%;
 	margin: 0 auto;
 	text-align: center;
-	background: rgba(128, 128, 128, 0.5);
 
 	@media screen and (max-width: 650px) {
 	    font-size: 120%;
@@ -385,6 +426,18 @@ header {
 	    padding: 10px 5%;
   	}	
 }
+
+.text  {
+	float: right;
+	width: 60%;
+	display: inline-block;
+}
+
+
+
+
+
+
 
 
 
@@ -397,6 +450,7 @@ header {
 	margin: 0 auto;	
 	background-color: #222;
     background: url(..//images/bg/black_lozenge.png) repeat;
+    border-top: 15px solid black;
 
 	h2 {
 		margin-top: 0;		
