@@ -39,6 +39,7 @@ body {
 }
 
 
+
 /*------HEADER-----*/
 header {
 	position: fixed;
@@ -382,9 +383,6 @@ left: 4%;
 	padding: 3%;
 	margin: 0 auto;
 	border-top: 15px solid black;
-	display:flex;
-	justify-content:center;
-	align-items:center;
 }
 
 .content_profil {
@@ -397,10 +395,15 @@ left: 4%;
 	width: 40%;
 	float: left;
 	display: inline-block;
-
+	margin-top: 10px;
 }
 
-
+.rest {
+	width: 40%;
+	float: right;
+	display: inline-block;
+	margin-top: 10px;
+}
 
 
 #profil h2 {
@@ -427,10 +430,21 @@ left: 4%;
   	}	
 }
 
-.text  {
+.text1  {
 	float: right;
 	width: 60%;
 	display: inline-block;
+}
+
+.text2 {
+		float: left;
+	width: 60%;
+	display: inline-block;
+
+}
+
+.rest, .text2 {
+	margin-top: 50px;
 }
 
 
