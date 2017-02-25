@@ -24,17 +24,17 @@ body {
 }
 
 
-.header:before, .content_profil:before,
-.header:after, .content_profil:after {
+.header:before, .content_profil:before, .cont1:before, .cont2:before, .contanier_header:before,
+.header:after, .content_profil:after, .cont1:after, .cont2:after, .contanier_header:after {
 	content: " ";
 	display: table;
 }
 
-.header:after, .content_profil:after {
+.header:after, .content_profil:after, .cont1:after, .cont2:after, .contanier_header:after {
 	clear: both;
 }
 
-.header, .content_profil {
+.header, .content_profil, .cont1, .cont2, .contanier_header {
 	*zoom: 1;
 }
 
@@ -181,13 +181,13 @@ header {
 .logo_ozex_img {
     	position: relative;
 	    width: 25%;
-	    top: 17%;
-    left: 27%;
+	    top: 30%;
+	    left: 38%;
 	
 	@media screen and (max-width: 900px) {
 		    width: 40%;
-			top: 25%;
-left: 17%;
+			top: 31%;
+			left: 30%;
 		
 	}
 
@@ -195,28 +195,6 @@ left: 17%;
 		    width: 50%;
 			top: 32%;
 			left: 23%;
-		
-  	}
-
-
-
-    }
-
-    .pecat {
-    	    width: 10%;
-    position: relative;
-    top: 20%;
-    left: 4%;
-
-	@media screen and (max-width: 900px) {
-		    width: 13%;
-			top: 25%;
-left: 4%;
-		
-	}
-
-	@media screen and (max-width: 650px) {
-		    display: none;
 		
   	}
 
@@ -380,7 +358,7 @@ left: 4%;
 #profil {	
 	background: url(..//images/bg/tapeta.jpg) repeat;
 	width: 100%;
-	padding: 3%;
+	padding: 50px 3%;
 	margin: 0 auto;
 	border-top: 15px solid black;
 }
@@ -388,7 +366,27 @@ left: 4%;
 .content_profil {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 50px 0;
+	padding: 0;
+
+	.pecat {
+		position: relative;
+    	width: 10%;
+    	left: 85%;
+
+    	@media screen and (max-width: 650px) {
+    		width: 15%;
+    		left: 80%;
+    	}
+	}
+}
+
+.cont2 {
+	    margin-top: 15px;
+}
+
+.text {
+	position: relative;
+	bottom: 75px
 }
 
 .oblek {
@@ -408,11 +406,12 @@ left: 4%;
 
 #profil h2 {
 	text-align: center;
-	margin-top: 0;	
+	margin-top: 0;
+	margin-bottom: 1.2em;	
 	font-size: 250%;
 
 	@media screen and (max-width: 650px) {
-    	font-size: 140%;
+    	font-size: 180%;
   	}	
 }
 
