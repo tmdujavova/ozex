@@ -24,7 +24,7 @@ $(document).ready(function(){
 	 //----------------------------------------------
 	 
 		var nav = $('.nav'),
-		navLinks = nav.find('a');
+		navLinks = nav.find('.page');
 
 	navLinks.on('click', function(event)
 	{
