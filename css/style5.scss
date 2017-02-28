@@ -420,8 +420,15 @@ header {
 	font-size: 140%;
 	max-width: $max-width;
 	padding: 10px 6%;
-	margin: 0 auto;
-	text-align: center;
+	margin: 10px auto;
+	text-align: left;
+
+	.fa {
+		padding: 5px;
+		font-size: 13px;
+		    position: relative;
+    bottom: 2px;
+	}
 
 	@media screen and (max-width: 650px) {
 	    font-size: 120%;
@@ -429,6 +436,7 @@ header {
 	    padding: 10px 5%;
   	}	
 }
+
 
 .text1  {
 	float: right;
@@ -549,7 +557,7 @@ header {
 			color: #80DEEA;	
 		}
 
-		li:nth-child(3) {
+		li:nth-child(3), li:nth-child(4) {
 			padding-left: 25px; 
 		}
     }
