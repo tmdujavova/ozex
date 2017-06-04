@@ -1,6 +1,6 @@
 @font-face {
-    font-family: SourceSansPro; 
-    src: url("../fonts/SourceSansPro-Light.ttf"); 
+    font-family: SourceSansPro;
+    src: url("../fonts/SourceSansPro-Light.ttf");
 }
 
 $font-stack: 'SourceSansPro', Helvetica, sans-serif;
@@ -20,7 +20,7 @@ html, body{
 body {
 	font: 100% $font-stack;
   	color: $primary-color;
-  	background: url(..//images/bg/agsquare.png) repeat;  	
+  	background: url(..//images/bg/agsquare.png) repeat;
 }
 
 
@@ -75,7 +75,8 @@ header {
 		margin: 0 5% 0 0;
 		padding-left: 0;
 		color: #000;
-		
+		font-weight: bolder;
+
 		li {
 			display: inline-block;
 			list-style: none;
@@ -98,7 +99,7 @@ header {
 			border-bottom: 4px solid #000;
 		}
 
-		@media screen and (max-width: 650px) {		
+		@media screen and (max-width: 650px) {
 			float: none;
 			margin: 0;
 			margin-top: 70px;
@@ -123,6 +124,16 @@ header {
 
 		 	a:focus,  a:hover,  a:active  {
 				background-color: #ddd;
+			}
+
+			.language {
+			 	padding-left: 7%;
+			}
+
+			.language a {
+				display: inline-block;
+			 	width: auto;
+			 	padding: 10px;
 			}
 	  }
 	}
@@ -184,19 +195,19 @@ header {
 	    width: 25%;
 	    top: 30%;
 	    left: 38%;
-	
+
 	@media screen and (max-width: 900px) {
 		    width: 40%;
 			top: 31%;
 			left: 30%;
-		
+
 	}
 
 	 @media screen and (max-width: 650px) {
 		    width: 50%;
 			top: 32%;
 			left: 23%;
-		
+
   	}
 
     }
@@ -228,7 +239,7 @@ header {
 	background-size: cover;
 	display: inline-block;
 	width: 32.66%;
-  
+
     a {
     	color: $primary-color;
     	text-decoration: none;
@@ -237,16 +248,16 @@ header {
     img {
     	display: block;
     }
-    
+
     p {
-    	display: none;    	
+    	display: none;
     	font-size: 130%;
     	padding: 1% 5%;
     	text-align: center;
     	width: 100%;
     	margin: 8% auto;
 		background: rgba(128, 128, 128, 0.5);
-				
+
 		@media screen and (max-width: 650px) {
 			display: block!important;
     	}
@@ -258,7 +269,7 @@ header {
 }
 
 .villa {
-	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;	
+	background: url(../images/plaza/villa/villa-foto.jpg) no-repeat center;
 	margin-right: 1%;
 
 	img {
@@ -284,9 +295,9 @@ header {
 }
 
 .beach {
-	background: url(../images/plaza/beach/IMG_9813-1.jpg) no-repeat center;		
-	
-	img {		
+	background: url(../images/plaza/beach/IMG_9813-1.jpg) no-repeat center;
+
+	img {
 	  	width: 65%;
 	    margin: 40% auto 5%;
   	}
@@ -308,7 +319,7 @@ header {
 }
 
 .residence {
-	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;	
+	background: url(../images/plaza/residence/residence-foto.jpg) no-repeat center;
 	margin-left: 1%;
 
 	img {
@@ -340,7 +351,7 @@ header {
 
 .hover {
 	margin: 3% auto!important;
-	transition: all 0.5s ease-in-out 0s!important;	
+	transition: all 0.5s ease-in-out 0s!important;
 }
 
 
@@ -356,7 +367,7 @@ header {
 }
 
 
-#profil {	
+#profil {
 	background: url(..//images/bg/tapeta.jpg) repeat;
 	width: 100%;
 	padding: 50px 3%;
@@ -394,26 +405,41 @@ header {
 	width: 40%;
 	float: left;
 	display: inline-block;
-	margin-top: 10px;
+	margin: 10px 50px 20px 0px;
+
+	@media screen and (max-width: 650px) {
+    		width: 85%;
+			float: none;
+			display: block;
+			margin: auto;
+			margin-top: 20px;
+    	}
 }
 
 .rest {
 	width: 40%;
 	float: right;
 	display: inline-block;
-	margin-top: 10px;
+	margin: 50px 0 20px 50px;
+
+	@media screen and (max-width: 650px) {
+    		width: 80%;
+			float: none;
+			display: block;
+			margin: auto;
+    	}
 }
 
 
 #profil h2 {
 	text-align: center;
 	margin-top: 0;
-	margin-bottom: 1.2em;	
+	margin-bottom: 1.2em;
 	font-size: 250%;
 
 	@media screen and (max-width: 650px) {
     	font-size: 180%;
-  	}	
+  	}
 }
 
 #profil p {
@@ -434,48 +460,23 @@ header {
 	    font-size: 120%;
 	    width: 90%;
 	    padding: 10px 5%;
-  	}	
+  	}
 }
-
-
-.text1  {
-	float: right;
-	width: 60%;
-	display: inline-block;
-}
-
-.text2 {
-		float: left;
-	width: 60%;
-	display: inline-block;
-
-}
-
-.rest, .text2 {
-	margin-top: 50px;
-}
-
-
-
-
-
-
-
 
 
 
 /*------KONTAKT-----*/
-#kontakt {	
+#kontakt {
 	width: 100%;
 	padding: 30px 5%;
 	padding-bottom: 50px;
-	margin: 0 auto;	
+	margin: 0 auto;
 	background-color: #222;
     background: url(..//images/bg/black_lozenge.png) repeat;
     border-top: 15px solid black;
 
 	h2 {
-		margin-top: 0;		
+		margin-top: 0;
 		font-size: 145%;
 		margin-left: 2%;
 
@@ -492,7 +493,7 @@ header {
 		margin-left: 2%;
 
 		@media screen and (max-width: 1080px) {
-    		margin-right: 40%; 
+    		margin-right: 40%;
   		}
   		@media screen and (max-width: 650px) {
     		margin: 0;
@@ -505,7 +506,7 @@ header {
 	padding-left: 5%;
 	max-width: $max-width;
 	margin: 0 auto;
-	
+
 	@media screen and (max-width: 1080px) {
     	padding-left: 0;
     	text-align: center;
@@ -513,7 +514,7 @@ header {
 
 }
 
-.row {	
+.row {
 	display: -webkit-box;
   	display: -ms-flexbox;
   	display: flex;
@@ -529,7 +530,7 @@ header {
   	}
 }
 .kontakt_villa {
-    	width: 27%!important;
+    	width: 27%;
     }
 
 .row>div {
@@ -540,7 +541,7 @@ header {
     	margin: 0;
 		padding-left: 0;
 		list-style: none;
-		
+
 		.fa {
   		color: #80DEEA;
   			}
@@ -548,30 +549,30 @@ header {
   		.fa-map-marker {
 			padding-right: 14px;
   		}
-			
+
 		.fa-phone {
-			padding-right: 10px; 
+			padding-right: 10px;
 		}
 
 		.fa-envelope {
-			padding-right: 8px; 
+			padding-right: 8px;
 		}
 
 
 		li:first-child {
-			color: #80DEEA;	
+			color: #80DEEA;
 		}
 
 		li:nth-child(3) {
-			padding-left: 25px; 
+			padding-left: 25px;
 		}
     }
 
-    
+
 
 
 	@media screen and (max-width: 1080px) {
-    	width: 40%;		
+    	width: 40%;
   	}
 
 	@media screen and (max-width: 650px) {
@@ -599,7 +600,7 @@ footer {
 		display: block;
 		color: #eee;
 		text-decoration: none;
-		font-size: 85%;		
+		font-size: 85%;
 	}
 }
 
